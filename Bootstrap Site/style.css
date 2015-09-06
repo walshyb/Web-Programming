@@ -1,0 +1,162 @@
+html,body {
+    background-color: whitesmoke !important;
+    height:100%;
+    width: 100%;
+}
+
+/*Navbar*/
+.nav>li {
+    display: inline-block;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav li {
+    text-align: center;
+}
+
+.navbar-nav, .navbar-nav>li {
+    float: none;
+    text-align: center;
+}
+
+.glyphicon {
+    color: black;
+    font-size: 25pt;
+}
+
+/*Intro*/
+
+.jumbotron, .jumbotron .container {
+    height: 100%;
+    padding: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+
+div#name {
+    top: 60%;
+    position: relative;
+}
+
+#name h1 {
+    font-size: 53pt;
+}
+
+#name h2 {
+    font-size: 30pt;
+}
+
+/*Portoflio*/
+
+#portfolio.jumbotron{
+    height:auto !important;
+}
+
+#projects {
+  position:relative;
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+
+#projects .container{
+  height:auto;
+  overflow: auto;
+}
+
+#projects .container::-webkit-scrollbar {
+  display: none;
+}
+
+#projects .proj {
+  height:300px;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 10px;
+  background-position: center;
+  background-size: cover;
+}
+
+#projects .desc {
+  height: 300px;
+  color:white;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 700;
+  opacity: 0;
+  background-color: rgba(44, 63, 82, 0.96);
+  transition-property:opacity;
+  transition-duration:0.4s;
+}
+
+#projects .desc:hover, #projects .desc.hovered {
+  opacity: 1;
+}
+
+#projects .desc p {
+  position: relative;
+    top: 40%;
+}
+/*About*/
+#about {
+    height: auto;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: lightgray;
+    border-color: #ddd !important;
+    color: black;
+}
+.progress-bar {
+    background-color: gray;
+}
+/*Form*/
+.contact-form-field {
+    max-width: 700px;
+    width: 90%;
+    padding-bottom: 7px !important;
+}
+#contact_message {
+    padding-bottom: 75px !important;
+}
+#contact_submit {
+    padding: 10px;
+    font-family: 'Raleway', 'Helvetica', sans-serif;
+    font-size: 11pt;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background-color: black !important;
+    color: white !important;
+    margin-bottom: 30px;
+}
+/*Media Queries*/
+@media screen and (max-width: 767px) {
+    div#projects div div {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #projects .proj {
+        height: 300px;
+        width: 300px;
+    }
+}
+@media screen and (max-width: 499px) {
+    div#name {
+        top: 45% !important;
+    }
+    #name h1 {
+        font-size: 40pt;
+    }
+    #name h2 {
+        font-size: 25pt;
+    }
+}
