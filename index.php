@@ -207,9 +207,26 @@
     
     <script>
     
+    (function(){ //immediately running function
+      
       $(".btn-success").on('click', function() {
         $(".progress-bar").animate({width: "99%"}, 400);
       });
+      
+      someName = function () {  //global variable -- AMAZING
+        $(".progress-bar").animate({width: myFirstObjectEver.width}, 400);
+      }
+      
+      var myFirstObjectEver = {  //ever, yeah
+        hey: "what's up hello",
+        width: 0
+      };
+      
+      //someName();
+      
+      setTimeout(someName , 2000);
+    })() 
+      
       
     </script>
   </body>
