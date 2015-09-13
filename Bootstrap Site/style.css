@@ -136,6 +136,13 @@ div#name {
     color: white !important;
     margin-bottom: 30px;
 }
+
+/*Dashboard Menu*/
+.menu-dashboard-menu .menu-item {
+    margin: 0;
+}
+
+
 /*Media Queries*/
 @media screen and (max-width: 767px) {
     div#projects div div {
