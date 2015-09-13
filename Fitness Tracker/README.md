@@ -2,7 +2,7 @@
 
 A project that is good for implementing technologies that students are learning and see how much they've learned, but not one I necessarily want to do because I want to create a project that hasn't already been invented and can be used in the real world.
 
-Please refer to the project I want to do, [The Cork Board](https://github.com/walshyb/Web-Programming/blob/master/The%20Cork%20Board/README.md)
+Please refer to the project I hope to do, [The Cork Board](https://github.com/walshyb/Web-Programming/blob/master/The%20Cork%20Board/README.md).
 
 If The Cork Board doesn't work out, I plan on proprosing to you, Professor Plotkin, another project.  But I sure hope it works out.
 

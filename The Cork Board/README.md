@@ -21,7 +21,7 @@ One project in particular caught my attention and it was The Cork Board.  The pr
 
 ## Technologies
 
-1. Node JS / Angular (or PHP)
+1. Node JS / Angular (or just PHP)
 2. jQuery
 3. Bootstrap
 4. npm / bower
