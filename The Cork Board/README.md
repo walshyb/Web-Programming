@@ -27,6 +27,6 @@ One project in particular caught my attention and it was The Cork Board.  The pr
 4. npm / bower
 5. A database
 
-## Disclaimer
+## Note
 
-Because this idea isn't my own, I emailed graphic design teacher, Professor Papaelias, and asked if she can assist me in contacting the project members so I can get permission from them to build the app as well as possibly involve them.
+I have permission from the original project idea creators to develop this project.
