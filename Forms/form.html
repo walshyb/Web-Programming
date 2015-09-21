@@ -5,37 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Exercise Log</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" type="text/css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css" />
   </head>
   <body>
     <div class="container">
         <div class="page-header">
-          <h1>Camel Bank <small>Your reserves for a dry day</small></h1>
+          <h1>Running <small>How many poops have you had today?</small></h1>
         </div>
+        
+        
         <form class="form-horizontal">
+          
+          <div class="alert" style="display: none" role="alert">
+            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Holy guacamole! Best check yo self, you're looking too good.</strong> 
+            <h3></h3>
+          </div>
+          
+          
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">How far did you run</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="txtEmail" placeholder="Email">
+              <input type="email" class="form-control" id="txtEmail" placeholder="15">
             </div>
           </div>
           <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            <label for="inputPassword3" class="col-sm-2 control-label">How much did you poop after</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+              <input type="number" class="form-control" id="txtPassword" placeholder="10">
             </div>
           </div>
+          
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="exampleInputAmount">Amount (in dollars)</label>
+            <label class="col-sm-2 control-label" for="exampleInputAmount">Poop Amount (in dollars)</label>
             <div class="col-sm-10">
                 <div class="input-group">
                   <div class="input-group-addon">$</div>
                   <input type="text" class="form-control" id="txtAmount" placeholder="Amount">
                   <div class="input-group-addon">.00</div>
                 </div>
+            </div>
+            
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">When</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="datepicker" >
             </div>
           </div>
           <div class="form-group">
@@ -62,23 +82,26 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script type="text/javascript">
         (function($){
             $(function(){
+              
                 
                 
                 var $inputs = $('input');
                 //($inputs).css('background-color', 'red');
                 //$inputs.css({backgroundColor: '#FFAAAA'});
                 
-                $('button').on('click', function(e){
+                $('.btn-success').on('click', function(e){
                   var self = this;
                     //$(this).css({display:'none'});
                     $(self).prop('disabled', true).html('Processing...');
                     
                     var percent = 0;
                     var interval = setInterval(function(){
-                         percent += 4;
+                         percent += 24;
                          $('.progress-bar').css('width', percent + '%');
                          $('.progress-bar span').text(percent);
                          if(percent >= 100) {
@@ -88,16 +111,38 @@
                             if( !$('#txtAmount').val() ) {
                                 $inputs.css({backgroundColor: '#FFAAAA'});
                                 $(self).prop('disabled', false).html('Try Again');
+                                $('.alert').addClass('alert-danger').show().find('h3').html('yous a didnt it.  AHHHHHHHHHHHHHHHHHHHHHHH');
+                                
+                                toastr.error('AHHHHHHHHHHHHHHHHHHHHHHH');
+                                console.log(self);
                             }
                             else {
                               //do something
                               //display success and submit
-                              $('form').prepend('<div class="alert alert-success">Success</div>');
+                              $('.alert').addClass('alert-success').show().find('h3').html('yous a dit it');
+                               toastr.success('AHHHHHHHHHHHHHHHHHHHHHHH');
+                               
+                               console.log(self);
+                               console.warn('warn');
+                               console.assert('assert');
+                               console.info('ibnfo');
+                               console.trace('trace');
                             }
+                            
+                            console.error('we are never never never being reached');
                          }
                     }, 200);
                     return false;
                 });
+                
+                $('.close').on('click', function(e) {
+                  //$('.alert').fadeOut(3000); 
+                  $(this).closest('.alert').slideUp();
+                });
+                
+                
+                $('input[type="number.spinner"]').spinner();
+                $('#datepicker').datepicker();
             });
         })(jQuery);
     </script>
