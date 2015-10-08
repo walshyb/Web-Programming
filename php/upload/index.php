@@ -1,5 +1,5 @@
 <?php
-  $name = 'Megan Doty';
+  $name = 'Megan Dotty';
   $message= "Welcome, $name";
   
   $snerson_leader = array( 'Name' => $name, 'Age' => 'A hunnit', 'Calories' => 2000000000, 'Rank' => 'Leader');
@@ -53,7 +53,7 @@
             </dl>
                 
             <?php
-              foreach ($snerson_minions as $i => $snerson): ?>
+              foreach ($snerson_minions as $i => $snerson): //list first then iterator?>
                 <dl class="dl-horizontal">
                   
                   <?=$i?>
