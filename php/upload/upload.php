@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +22,7 @@
         </div>
         
         <p><span style="color: red;">*</span> denotes field is required.</p>
-        <form class="form-horizontal">
+        <form class="form-horizontal" action="" method="post">
           
           <div class="alert" style="display: none" role="alert">
             <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>

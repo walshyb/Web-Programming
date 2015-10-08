@@ -1,16 +1,25 @@
 <?php
+  session_start();
   $name = 'Megan Dotty';
   $message= "Welcome, $name";
   
   $snerson_leader = array( 'Name' => $name, 'Age' => 'A hunnit', 'Calories' => 2000000000, 'Rank' => 'Leader');
   
-  $snerson_minions = array(
+  $eventName = $_SESSION['eventName'];
+  
+  if(!$eventName) {
+     $eventName[] = $_POST;
+     $_SESSION['eventName'] = $eventName;
+     header();
+  }
+  
+  /*$_SESSION['eventName'] = $snerson_minions = array(
       array( 'Name' => 'Shauna Keating', 'Time' => strtotime('one hour ago'), 'Calories' => '∞', 'Rank' => 'Minion'),
       array( 'Name' => 'Victoria Bottali', 'Time' => strtotime('one hour ago'), 'Calories' => '∞', 'Rank' => 'Minion'),
       array( 'Name' => 'Erik Bates', 'Time' => strtotime('one hour ago'), 'Calories' => '∞', 'Rank' => 'Minion'),
       array( 'Name' => 'Aston Sanders', 'Time' => strtotime('one hour ago'), 'Calories' => '∞', 'Rank' => 'Minion')
-      );
-      
+      );*/
+  
   $total = 0;
   
   
